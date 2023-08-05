@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>Health Care</title>
+<link href="{{ url_for('static', filename='css/checkup.css') }}" rel="stylesheet" type="text/css">
+</head>
+<body>
+<header>
+    <p id="intro" style="color: white;font-size: 30px;background-color: black;text-align: center" >Enter the values to predict the patient's health status</p>
+    <input type="checkbox" name="alcohol">
+            <label for="alcohol" style="font-size: 20px;background-color: yellow;color: black"> Do you consume Alcohol?</label>
+            <input type="checkbox" name="smoker">
+            <label for="smoker" style="font-size: 20px;background-color: yellow;color: black"> Do you smoke?</label>  
+    <form action="{{ url_for('checkup')}}"method="POST">
+  
+        <fieldset>
+			<legend style="color: black;font-size: 30px;">DBP & SBP</legend>
+			<label for="dbp" style="color: yellow;font-size: 23px;background-color: black">SBP:</label>
+				<input type="text" name="dbp" required="required">
+        <br><label for="sbp" style="color: yellow;font-size: 23px;background-color: black">DBP:</label>
+                <input type="text" name="sbp" required="required" >
+        </fieldset>             
+        <fieldset style="background-color: lightblue">
+                <legend style="color: lightgreen;font-size: 30px;background-color: black">Pulse & Temperature</legend>
+                <label for="pulse" style="color: yellow;font-size: 23px;background-color: black">Pulse:</label>
+                <input type="text" name="pulse" required="required" >
+                <label for="temperature" style="color: yellow;font-size: 23px;background-color: black">Temperature:</label>
+                <input type="text" name="temperature" required="required" >
+        </fieldset>
+        <button type="submit" class="btn predict" style="font-size: 23px;background-color: red;color: white">Predict</button>  
+    </form>     
+            <fieldset class="a">
+			<legend style="color: red;font-size: 30px;background-color: black">Result</legend>
+            <label style="color: black;font-size: 23px">Health: </label><input type="text" name="health" value="{{ prediction_text }}"><br />
+            <label for="med"style="color: black;font-size: 23px">Medication </label>
+                <textarea id="med" name="med" rows="4" cols="50">{{ medic }}</textarea>
+                
+                
+			</fieldset> 
+    </header>                                                                                           
+    </body>
+</html>

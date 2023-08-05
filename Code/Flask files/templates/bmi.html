@@ -1,0 +1,30 @@
+<html>
+    <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mystyle1.css') }}">
+     <script type="text/javascript" src="{{ url_for('static', filename='js/jsfile.js') }}"></script>
+    </head>
+    <body style="align-self: center">
+    <header style="background-image: url(/static/img/bmi.png)">
+	<div>
+		<p id="intro" style="color: white;font-size: 30px;background-color: black" >Enter your weight and height and click the Calculate button to display your BMI result.</p>
+		<form action="none" method="post" name="bmiForm" >
+			<fieldset>
+			<legend style="color: black;font-size: 30px">Height and Weight</legend>
+				<label for="pounds" style="color: black;font-size: 23px">Weight (Kg):</label>
+				<input type="text" name="pounds" >
+				<br>
+				<label for="inches" style="color: black;font-size: 23px">Height (cm):</label>
+				<input type="text" name="inches" >
+				<br>
+				<input type="button" name="calculate" value="Calculate your BMI" onclick="calculateBmi()">
+			</fieldset>
+			<fieldset>
+			<legend style="color: black;font-size: 30px">BMI</legend>
+				<label style="color: black;font-size: 23px">Your BMI: </label><input type="text" name="bmi"><br />
+<label style="color: black;font-size: 23px">Status: </label><input type="text" name="meaning"><br />
+			</fieldset>
+		</form>
+	</div>
+        </header>
+</body>
+</html>

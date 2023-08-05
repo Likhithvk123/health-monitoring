@@ -1,0 +1,30 @@
+
+<html>
+<head>
+<title>Health Care</title>
+<link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+<header>
+    
+<div class="row">
+ <div class="logo">
+<img src="/static/img/symb.jpg">
+ </div>
+ <ul class="main-nav">
+ <li><a href="checkup.html">Checkup</a></li><br><br>
+ <li><a href="bmi.html"> BMI </a></li>
+ </ul>                    
+</div> 
+    
+<div class="hero">
+  <h1>Health is Wealth!</h1>
+  <div class="button">
+  <a href="{{ url_for('static', filename='video/vid.mp4') }}" class="btn btn-one">Watch video</a>   
+  <a href="about.html" class="btn btn-two"> About us </a>
+  </div>  
+</div>
+    
+</header>
+</body>
+</html>

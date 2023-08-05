@@ -1,0 +1,2 @@
+# Health-monitoring-system-using-ML
+In this Health monitoring system we will be detecting the level of health status of the person and we consider parameters such as Blood pressure,pulse, and temperature to analyze his health status from 0 to 2. 0 indicates that the person is perfectly fine, 1 indicates that the person is not completely healthy and 2 indicates that the person is sick and needs to consult a doctor immediately.
